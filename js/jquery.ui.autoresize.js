@@ -1,5 +1,5 @@
 /**
- *  textarea 自动调整高度
+ *  textarea 鑷姩璋冩暣楂樺害
  *  textarea auto-resize
  *  @author cfddream
  *  jquery.ui.autoresize.js
@@ -90,9 +90,9 @@
 
             this.$ele.bind('keyup.autoresize', resize);
             this.$ele.bind('change.autoresize', resize);
-            this.$ele.bind('paste.autoresize', resize);     // 粘贴
-            this.$ele.bind('input.autoresize', resize);     // 输入
-            this.$ele.bind('cut.autoresize', resize);       // 剪切
+            this.$ele.bind('paste.autoresize', resize);     // 绮樿创
+            this.$ele.bind('input.autoresize', resize);     // 杈撳叆
+            this.$ele.bind('cut.autoresize', resize);       // 鍓垏
 
             // IE9 has oninput, support IE6~8
             if (IE && !('oninput' in this.$ele[0])) {
@@ -113,7 +113,7 @@
         },
         copyCss: function () {
             var i = 0, l = COPY_CSS.length, k;
-            for (; i < l; i++) {
+            for (i; i < l; i++) {
                 k = COPY_CSS[i];
                 $CLONE[0].style[k] = this.$ele.css(k);
             }
@@ -131,7 +131,7 @@
             value = $ele.val(),
             prevValue = $ele.data('prevValue');
 
-        if (value === prevValue) return;
+        if (value === prevValue) {return;}
         $ele.data('prevValue', value);
 
         $CLONE.height(0).val(value).scrollTop(10000);
@@ -139,7 +139,7 @@
         var scrollTop = $CLONE[0].scrollTop,
             prevScrollTop = $ele.data('prevScrollTop');
 
-        if (prevScrollTop === scrollTop) return;
+        if (prevScrollTop === scrollTop) {return;}
         $ele.data('prevScrollTop', scrollTop);
 
         var minHeight = $ele.data('minHeight'),
