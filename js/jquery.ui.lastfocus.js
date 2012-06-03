@@ -1,7 +1,7 @@
 !function ( $ ) {
-  // fixed Mozilla focus
+  // fixed Mozilla Firefox/Opera focus
 
-  $.fn.lastfocus = $.browser.mozilla ?
+  $.fn.lastfocus = ($.browser.mozilla || $.browser.opera) ?
     function () {
       if (!this[0]) return;
       var target = this[0]
