@@ -4,7 +4,9 @@
    * Refer:
    *    http://dev.w3.org/html5/spec/dnd.html
    *    http://stackoverflow.com/questions/10253663/how-to-detect-the-dragleave-event-in-firefox-when-dragging-outside-the-window
-   *    http://jsfiddle.net/robertc/HU6Mk/3/
+   *    http://jsfiddle.net/robertc/HU6Mk/3/ chrome 失效
+   * 
+   *    可以结合 mouseenter/mouseleave; 也可以设置一层遮罩，避免子元素的触发
    */
 
   $.event.special.dragleave = {
