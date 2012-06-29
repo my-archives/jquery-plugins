@@ -1,6 +1,7 @@
 !function ( $ ) {
-  // Firefox does not implement offsetX, OffsetY
+  // Firefox does not implement offsetX, offsetY
 
+  // In Firefox, you can use e.layerX / e.layerY and css must set position property
   if (! $.browser.mozilla) return false;
 
   var originalFilter = $.event.mouseHooks.filter;
